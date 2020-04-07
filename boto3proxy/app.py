@@ -9,7 +9,7 @@ from starlette.responses import Response
 from starlette.routing import Route
 
 
-@lru_cache
+@lru_cache(48)
 def get_client(service):
     return boto3.client(service)
 
